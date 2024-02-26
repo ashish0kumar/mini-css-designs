@@ -6,3 +6,8 @@
 [Pricing panel](https://ashish0kumar.github.io/Mini-projects/Pricing-panel/)<br><br>
 [Registration](https://ashish0kumar.github.io/Mini-projects/register-page/)<br><br>
 [Shop page](https://ashish0kumar.github.io/Mini-projects/shop-page/)<br><br>
+
+## Login page clones
+[Facebook](https://ashish0kumar.github.io/Mini-projects/Login-page-clones/Facebook/)<br><br>
+[Insta](https://ashish0kumar.github.io/Mini-projects/Login-page-clones/Insta/)<br><br>
+[Spotify](https://ashish0kumar.github.io/Mini-projects/Login-page-clones/Spotify/)<br><br>
