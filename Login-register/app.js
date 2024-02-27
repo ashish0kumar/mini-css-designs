@@ -7,9 +7,14 @@ const formBoxRegister = document.querySelector(".form-box.register");
 const loginLink = document.querySelector(".login-link");
 const registerLink = document.querySelector(".register-link");
 
+//* login wrapper on click
+
 loginBtn.addEventListener("click", () => {
     wrapper.classList.add("show");
 })
+
+
+//* login and register linking
 
 registerLink.addEventListener("click", () => {
     formBoxLogin.classList.remove("show");
@@ -22,6 +27,7 @@ loginLink.addEventListener("click", () => {
     formBoxRegister.classList.add("hide");
     formBoxLogin.classList.add("show");
 })
+
 
 //* Reload on clicking Logo
 
@@ -56,6 +62,8 @@ let regEyeIcon = document.querySelector("#reg-eye-icon");
 showHidePassword(regPassword, regEyeIcon);
 
 
+//* password validation
+
 let msg = document.querySelector("#message");
 let strength = document.querySelector("#strength");
 const info = document.querySelector("#info");
@@ -80,6 +88,8 @@ regPassword.addEventListener("input", () => {
     }
 })
 
+
+//* password validation info
 
 msg.addEventListener("mouseenter", () => {
     info.style.display = "block";
