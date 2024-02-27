@@ -86,7 +86,7 @@ header a {
 
 .wrapper {
     position: relative;
-    /* width: 400px; */
+    width: 450px;
     background: linear-gradient(#c8e690, #2d6349);
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
@@ -145,6 +145,27 @@ header a {
     padding: 0 35px 0 5px;
 }
 
+#message {
+    width: fit-content;
+    font-size: 0.9em;
+    margin: 15px 0 0 0;
+    display: none;
+}
+
+#info {
+    font-size: 0.8em;
+    color: #162938;
+    background: #c5e38e;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    width: 400px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transform: translateX(-13px);
+    display: none;
+}
+
 .input-box .icon {
     position: absolute;
     right: 8px;
@@ -157,7 +178,7 @@ header a {
     font-size: 0.9em;
     color: #162938;
     font-weight: 500;
-    margin: 20px 0 15px 0;
+    margin: 45px 0 15px 0;
     display: flex;
     justify-content: space-between;
 }

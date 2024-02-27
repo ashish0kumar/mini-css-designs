@@ -54,3 +54,37 @@ showHidePassword(loginPassword, loginEyeIcon);
 let regPassword = document.querySelector("#reg-password");
 let regEyeIcon = document.querySelector("#reg-eye-icon");
 showHidePassword(regPassword, regEyeIcon);
+
+
+let msg = document.querySelector("#message");
+let strength = document.querySelector("#strength");
+const info = document.querySelector("#info");
+
+regPassword.addEventListener("input", () => {
+    if (regPassword.value.length > 0) {
+        msg.style.display = "block";
+    } else {
+        msg.style.display = "none";
+    }
+
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    let passwordVal = regPassword.value;
+    let result = regex.test(passwordVal);
+
+    if (result) {
+        strength.innerHTML = "strong";
+        msg.style.color = "#13463d";
+    } else {
+        strength.innerHTML = "weak";
+        msg.style.color = "#790101";
+    }
+})
+
+
+msg.addEventListener("mouseenter", () => {
+    info.style.display = "block";
+})
+
+msg.addEventListener("mouseleave", () => {
+    info.style.display = "none";
+})

@@ -22,7 +22,9 @@
 
     <header>
 
-        <a href="#" id="logo"><h2 class="logo">YelpCamp</h2></a>
+        <a href="#" id="logo">
+            <h2 class="logo">YelpCamp</h2>
+        </a>
         <nav class="navigation">
             <a href="#">Home</a>
             <a href="#">About</a>
@@ -92,6 +94,11 @@
                     <span class="icon" id="reg-eye-icon"><i class="fa-solid fa-eye-slash"></i></span>
                     <input type="password" id="reg-password" required>
                     <label>Password</label>
+                    <p id="message"><i id="info-icon" class="fa-solid fa-circle-info"></i>&nbsp;Password is <span id="strength"></span>
+                    </p>
+                    <div id="info">Password should be atleast 8 characters long, contains at least one upper case
+                        letter, one lower case letter,one number, and one special character.
+                    </div>
                 </div>
 
                 <div class="remember-forgot">
