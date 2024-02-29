@@ -7,7 +7,7 @@ const formBoxRegister = document.querySelector(".form-box.register");
 const loginLink = document.querySelector(".login-link");
 const registerLink = document.querySelector(".register-link");
 
-//* login wrapper on click
+//* open login wrapper on click
 
 loginBtn.addEventListener("click", () => {
     wrapper.classList.add("show");
@@ -29,7 +29,7 @@ loginLink.addEventListener("click", () => {
 })
 
 
-//* Reload on clicking Logo
+//* reload on clicking Logo
 
 const logoBtn = document.querySelector("#logo");
 
@@ -38,7 +38,7 @@ logoBtn.addEventListener("click", () => {
 })
 
 
-//* Show and hide password
+//* show and hide password
 
 const showHidePassword = (password, eyeIcon) => {
 
@@ -98,3 +98,33 @@ msg.addEventListener("mouseenter", () => {
 msg.addEventListener("mouseleave", () => {
     info.style.display = "none";
 })
+
+
+//* generate random password
+
+const length = 12;
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+const numbers = "0123456789";
+const specialChars = "!@#$%^&*()_-+=~|}{[]<>/?";
+
+const allChars = upperCase + lowerCase + numbers + specialChars;
+
+function createRandomPassword() {
+    let password = "";
+    password += upperCase[Math.floor(Math.random() * upperCase.length)];
+    password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+    password += numbers[Math.floor(Math.random() * numbers.length)];
+    password += specialChars[Math.floor(Math.random() * specialChars.length)];
+
+    while (length > password.length) {
+        password += allChars[Math.floor(Math.random() * allChars.length)];
+    }
+
+    regPassword.value = password;
+}
+
+const randomIcon = document.querySelector("#reg-random-icon");
+
+randomIcon.addEventListener("click", createRandomPassword);
+
